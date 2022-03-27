@@ -1,0 +1,52 @@
+.profile-edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    .section{
+        border: 1px solid $color-1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 7px;
+        margin: 7px;
+        font-family: $main-font;
+        label {
+            color: $color-1;
+            font-family: $main-font;
+            padding-left: 15px;
+        }
+        input {
+            padding: 5px 10px;
+            border: 1px solid $color-1;
+            border-radius: 12px;
+            color: $color-1;
+            width: 100%;
+            font-family: $main-font;
+            color: $color-2;
+            &:focus {
+                border: none;
+                padding: 8px 13px;
+            }
+        }
+        .avatar-preview {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+    }
+}

@@ -43,7 +43,7 @@ class Register extends Component
 
         $this->reset();
 
-        session()->flash('success', 'Your accout created successfuly');
+        session()->flash('success', 'Your account created successfuly');
     }
     public function render()
     {
