@@ -345,6 +345,7 @@ main {
 
 .alert {
   position: absolute;
+  display: flex;
   padding: 10px 20px;
   bottom: 20px;
   right: 20px;
@@ -358,6 +359,15 @@ main {
 }
 .alert.danger {
   background: #ffd20a;
+}
+.alert button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #2b0044;
+  font-family: "Roboto Slab", serif;
+  margin-right: 5px;
+  font-size: 14px;
 }
 
 .profile-edit {
@@ -404,6 +414,11 @@ main {
 .profile-edit .form-group input:focus {
   border: none;
   padding: 8px 13px;
+}
+.profile-edit .form-group .error {
+  font-family: "Roboto Slab", serif;
+  color: red;
+  font-size: 14px;
 }
 .profile-edit .form-group .avatar-preview {
   width: 100px;

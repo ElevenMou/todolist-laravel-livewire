@@ -1,5 +1,6 @@
 .alert{
     position: absolute;
+    display: flex;
     padding: 10px 20px;
     bottom: 20px;
     right: 20px;
@@ -12,5 +13,14 @@
     }
     &.danger{
         background: rgb(255, 210, 10);
+    }
+    button{
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: $color-1;
+        font-family: $main-font;
+        margin-right: 5px;
+        font-size: 14px;
     }
 }

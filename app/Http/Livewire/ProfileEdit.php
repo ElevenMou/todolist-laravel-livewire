@@ -3,20 +3,21 @@
 namespace App\Http\Livewire;
 
 use Illuminate\Support\Facades\Auth;
-use Livewire\WithFileUploads;
+
 use Livewire\Component;
 
 class ProfileEdit extends Component
 {
-    use WithFileUploads;
+
 
     public $user;
-    public $avatar;
     public $first_name;
     public $last_name;
+    public $session = false;
+
+    protected $listeners = ['avatarUpdated'];
 
     protected $rules = [
-        'avatar' => 'image',
         'first_name' => 'required|string|max:30|min:3',
         'last_name' => 'required|string|max:30|min:3',
     ];
@@ -26,27 +27,31 @@ class ProfileEdit extends Component
         $this->validateOnly($propertyName);
     }
 
-    public function updateAvatar()
+    public function avatarUpdated()
     {
-        $this->validate();
-
-        $path = $this->avatar->store('images/avatars');
-
-        $this->user->update(['avatar' => $path,]);
+        $this->session = true;
 
         session()->flash('success', 'Your avatar updated successfuly');
     }
+
+    public function closeSession()
+    {
+        $this->session = false;
+    }
+
 
     public function updateName()
     {
         $this->validate();
 
-        $path = $this->avatar->store('images/avatars');
-
         $this->user->update([
             'first_name' => $this->first_name,
             'last_name' => $this->last_name
         ]);
+
+        $this->session = true;
+
+        $this->emit('nameUpdated');
 
         session()->flash('success', 'Your name updated successfuly');
     }
