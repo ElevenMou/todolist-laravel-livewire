@@ -12,7 +12,7 @@
         <meta name="user_id" content="{{ Auth::user()->id }}" />
     @endif
 
-    <title>{{ config('app.name', 'ToDoList') }}</title>
+    <title>ToDoList</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
