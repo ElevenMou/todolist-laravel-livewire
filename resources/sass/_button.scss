@@ -1,0 +1,36 @@
+.btn{
+    padding: 5px 10px;
+    border: none;
+    font-family: $main-font;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin: 5px;
+    &.completed{
+        background: $color-2;
+        color: $white;
+        &:hover{
+            border: 1px solid $color-2;
+            color: $color-2;
+            background: $white;
+        }
+    }
+    &.incompleted{
+        background: $white-1;
+        color: $color-1;
+        &:hover{
+            border: 1px solid $white-1;
+            color: $white-1;
+            background: $color-1;
+        }
+    }
+    &.delete{
+        background: red;
+        color: $white;
+        &:hover{
+            border: 1px solid red;
+            color: red;
+            background: $white;
+        }
+    }
+}

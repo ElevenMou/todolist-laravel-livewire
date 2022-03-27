@@ -1,0 +1,76 @@
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: $black;
+    width: 100%;
+    height: 60px;
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 20%;
+
+    }
+    .nav-item{
+        height: 100%;
+        text-decoration: none;
+        text-align: center;
+        color: $white-1;
+        font-family: $main-font;
+        border-radius: 16px;
+        padding: 18px 15px;
+        transition: all 0.5s ease;
+        &:hover,
+        &.active{
+            background: $white-1;
+            color: $color-1;
+        }
+    }
+    .profile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img{
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+        .name{
+            color: $white-1;
+            font-family: $main-font;
+            font-weight: 600;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        .logout{
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: $main-font;
+            color: $white;
+            font-weight: 400;
+            font-size: 24px;
+            &:hover{
+                color: $color-1;
+            }
+        }
+    }
+    .logo{
+        text-decoration: none;
+        text-align: center;
+        font-family: $main-font;
+        font-weight: 900;
+        font-size: 26px;
+        transition: all 0.5s ease;
+        .logo1{
+            color: $white-1;
+        }
+        .logo2{
+            color: $color-2;
+        }
+        .logo3{
+            color: $color-1;
+        }
+    }
+}

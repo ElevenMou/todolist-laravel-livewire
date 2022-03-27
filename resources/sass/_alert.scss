@@ -1,0 +1,16 @@
+.alert{
+    position: absolute;
+    padding: 10px 20px;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 10px;
+    color: $white;
+    border: 1px solid $white-1;
+    font-family: $main-font;
+    &.success{
+        background: green;
+    }
+    &.danger{
+        background: rgb(255, 210, 10);
+    }
+}

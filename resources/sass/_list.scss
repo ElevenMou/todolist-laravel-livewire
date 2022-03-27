@@ -1,0 +1,107 @@
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 90%;
+    border: 2px solid $color-1;
+    border-radius: 10px;
+    overflow: hidden;
+    .heading {
+        position: relative;
+        width: 100%;
+        background: $color-2;
+        #title {
+            text-align: center;
+            color: $white;
+            font-family: $main-font;
+            padding: 5px;
+        }
+        .add-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: 10px;
+
+            input {
+                padding: 5px;
+                width: 80%;
+                margin-right: 10px;
+                font-family: $main-font;
+                color: $color-1;
+                border: none;
+                border-radius: 10px;
+            }
+            button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                &:active {
+                    .icon {
+                        color: $color-1;
+                    }
+                }
+            }
+            .icon {
+                color: $white;
+                font-size: 24px;
+                text-align: center;
+            }
+        }
+    }
+    .items-list {
+        background: $white;
+        padding: 10px;
+        width: 100%;
+        table {
+            width: 100%;
+            font-family: $main-font;
+            th {
+                text-align: start;
+                color: $color-1;
+                border-bottom: 1px solid $color-1;
+                padding-left: 10px;
+                padding-bottom: 10px;
+            }
+
+            .task {
+                width: 60%;
+                padding: 15px 5px;
+                color: $color-1;
+                transition: all 1s ease;
+                &.task-completed {
+                    color: $color-2;
+                    text-decoration: line-through;
+                }
+            }
+
+            .completed-at {
+                width: 20%;
+                transition: all 1s ease;
+                &.task-completed{
+                    color: $color-2;
+                }
+                &.task-incompleted{
+                    color: $color-1;
+                }
+            }
+
+            .action {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .done{
+                    color: $color-2;
+                    font-family: $main-font;
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+}

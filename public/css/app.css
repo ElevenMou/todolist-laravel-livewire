@@ -1,0 +1,332 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  min-height: 100vh;
+  top: 60px;
+  transition: all 0.5s ease;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #000000;
+  width: 100%;
+  height: 60px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+}
+header .nav-item {
+  height: 100%;
+  text-decoration: none;
+  text-align: center;
+  color: #f2cffd;
+  font-family: "Roboto Slab", serif;
+  border-radius: 16px;
+  padding: 18px 15px;
+  transition: all 0.5s ease;
+}
+header .nav-item:hover, header .nav-item.active {
+  background: #f2cffd;
+  color: #2b0044;
+}
+header .profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .profile img {
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+header .profile .name {
+  color: #f2cffd;
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 10px;
+}
+header .profile .logout {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: "Roboto Slab", serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 24px;
+}
+header .profile .logout:hover {
+  color: #2b0044;
+}
+header .logo {
+  text-decoration: none;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  font-weight: 900;
+  font-size: 26px;
+  transition: all 0.5s ease;
+}
+header .logo .logo1 {
+  color: #f2cffd;
+}
+header .logo .logo2 {
+  color: #700B97;
+}
+header .logo .logo3 {
+  color: #2b0044;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 80vh;
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000000;
+  box-shadow: 4px 2px 1px #700B97;
+  padding: 20px;
+  width: 40vw;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+.form form .form-title {
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  color: #700B97;
+  padding-bottom: 10px;
+  width: 100%;
+  border-bottom: 1px solid #700B97;
+}
+.form form .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 7px;
+  font-family: "Roboto Slab", serif;
+}
+.form form .form-group label {
+  color: #f2cffd;
+  padding: 4px;
+}
+.form form .form-group input {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 12px;
+  color: #2b0044;
+  width: 100%;
+}
+.form form .form-group input:focus {
+  border: none;
+  padding: 8px 13px;
+}
+.form form .form-group .form-err {
+  color: red;
+  font-family: "Roboto Slab", serif;
+  font-size: 12px;
+}
+
+.main-btn {
+  cursor: pointer;
+  width: 100%;
+  background: #700B97;
+  padding: 4px;
+  margin: 5px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+  font-size: large;
+  color: #f2cffd;
+  border: none;
+  border-radius: 12px;
+}
+.main-btn:hover {
+  color: #2b0044;
+  background: #f2cffd;
+  border: 2px solid #2b0044;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  width: 90%;
+  border: 2px solid #2b0044;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.container .heading {
+  position: relative;
+  width: 100%;
+  background: #700B97;
+}
+.container .heading #title {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Roboto Slab", serif;
+  padding: 5px;
+}
+.container .heading .add-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 10px;
+}
+.container .heading .add-item input {
+  padding: 5px;
+  width: 80%;
+  margin-right: 10px;
+  font-family: "Roboto Slab", serif;
+  color: #2b0044;
+  border: none;
+  border-radius: 10px;
+}
+.container .heading .add-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.container .heading .add-item button:active .icon {
+  color: #2b0044;
+}
+.container .heading .add-item .icon {
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+}
+.container .items-list {
+  background: #ffffff;
+  padding: 10px;
+  width: 100%;
+}
+.container .items-list table {
+  width: 100%;
+  font-family: "Roboto Slab", serif;
+}
+.container .items-list table th {
+  text-align: start;
+  color: #2b0044;
+  border-bottom: 1px solid #2b0044;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.container .items-list table .task {
+  width: 60%;
+  padding: 15px 5px;
+  color: #2b0044;
+  transition: all 1s ease;
+}
+.container .items-list table .task.task-completed {
+  color: #700B97;
+  text-decoration: line-through;
+}
+.container .items-list table .completed-at {
+  width: 20%;
+  transition: all 1s ease;
+}
+.container .items-list table .completed-at.task-completed {
+  color: #700B97;
+}
+.container .items-list table .completed-at.task-incompleted {
+  color: #2b0044;
+}
+.container .items-list table .action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .items-list table .action .done {
+  color: #700B97;
+  font-family: "Roboto Slab", serif;
+  font-size: 8px;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+  font-family: "Roboto Slab", serif;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin: 5px;
+}
+.btn.completed {
+  background: #700B97;
+  color: #ffffff;
+}
+.btn.completed:hover {
+  border: 1px solid #700B97;
+  color: #700B97;
+  background: #ffffff;
+}
+.btn.incompleted {
+  background: #f2cffd;
+  color: #2b0044;
+}
+.btn.incompleted:hover {
+  border: 1px solid #f2cffd;
+  color: #f2cffd;
+  background: #2b0044;
+}
+.btn.delete {
+  background: red;
+  color: #ffffff;
+}
+.btn.delete:hover {
+  border: 1px solid red;
+  color: red;
+  background: #ffffff;
+}
+
+.alert {
+  position: absolute;
+  padding: 10px 20px;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 10px;
+  color: #ffffff;
+  border: 1px solid #f2cffd;
+  font-family: "Roboto Slab", serif;
+}
+.alert.success {
+  background: green;
+}
+.alert.danger {
+  background: #ffd20a;
+}
