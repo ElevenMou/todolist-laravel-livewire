@@ -1,8 +1,15 @@
 <div class="add-item">
 
-    <input wire:model="title" type="text">
+    <div class="add-item-form">
+        <input wire:model="title" type="text">
+        <button wire:click="addItem">
+            <i class="icon far fa-plus-square"></i>
+        </button>
+    </div>
 
-    <button wire:click="addItem">
-        <i class="icon far fa-plus-square"></i>
-    </button>
+    @error('title')
+        <div class="item-err">
+            <p> {{ $message }}</p>
+        </div>
+    @enderror
 </div>

@@ -26,32 +26,44 @@ main {
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
             width: 100%;
             margin: 10px;
-
-            input {
-                padding: 5px;
-                width: 80%;
-                margin-right: 10px;
-                font-family: $main-font;
-                color: $color-1;
-                border: none;
-                border-radius: 10px;
-            }
-            button {
-                background: none;
-                border: none;
-                cursor: pointer;
-                &:active {
+            .add-item-form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 10px;
+                input {
+                    padding: 5px;
+                    width: 80%;
+                    margin-right: 10px;
+                    font-family: $main-font;
+                    color: $color-1;
+                    border: none;
+                    border-radius: 10px;
+                }
+                button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    &:active {
+                        .icon {
+                            color: $color-1;
+                        }
+                    }
                     .icon {
-                        color: $color-1;
+                        color: $white;
+                        font-size: 24px;
+                        text-align: center;
                     }
                 }
             }
-            .icon {
-                color: $white;
-                font-size: 24px;
-                text-align: center;
+            .item-err{
+                color: red;
+                font-family: $main-font;
+                font-size: 14px;
             }
         }
     }
@@ -84,10 +96,10 @@ main {
             .completed-at {
                 width: 20%;
                 transition: all 1s ease;
-                &.task-completed{
+                &.task-completed {
                     color: $color-2;
                 }
-                &.task-incompleted{
+                &.task-incompleted {
                     color: $color-1;
                 }
             }
@@ -96,7 +108,7 @@ main {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                .done{
+                .done {
                     color: $color-2;
                     font-family: $main-font;
                     font-size: 8px;

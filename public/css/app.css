@@ -205,10 +205,18 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
   margin: 10px;
 }
-.container .heading .add-item input {
+.container .heading .add-item .add-item-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.container .heading .add-item .add-item-form input {
   padding: 5px;
   width: 80%;
   margin-right: 10px;
@@ -217,18 +225,23 @@ main {
   border: none;
   border-radius: 10px;
 }
-.container .heading .add-item button {
+.container .heading .add-item .add-item-form button {
   background: none;
   border: none;
   cursor: pointer;
 }
-.container .heading .add-item button:active .icon {
+.container .heading .add-item .add-item-form button:active .icon {
   color: #2b0044;
 }
-.container .heading .add-item .icon {
+.container .heading .add-item .add-item-form button .icon {
   color: #ffffff;
   font-size: 24px;
   text-align: center;
+}
+.container .heading .add-item .item-err {
+  color: red;
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
 }
 .container .items-list {
   background: #ffffff;

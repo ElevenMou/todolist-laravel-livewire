@@ -10,8 +10,19 @@ class AddItemForm extends Component
 {
     public $title = '';
 
+    protected $rules = [
+        'title' => 'required|min:5|max:200'
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function addItem(){
         $id = Auth::id();
+
+        $this->validate();
 
         Item::create([
             'title' => $this->title,
