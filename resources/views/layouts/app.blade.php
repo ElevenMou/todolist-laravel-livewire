@@ -51,7 +51,7 @@
                         href="{{ route('register') }}">{{ __('Register') }}</a>
                     @endif
                 @else
-                    <div class="profile">
+                    <a href="{{ route('profile.edit') }}" class="profile">
                         <img src="{{ asset('storage/' . Auth::user()->avatar) }}" alt="avatar">
                         <p class="name">{{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}</p>
                         <form action="{{ route('logout') }}" method="POST" class="logout">
@@ -60,7 +60,7 @@
                                 <i class="fas fa-sign-out-alt"></i>
                             </button>
                         </form>
-                    </div>
+                    </a>
                 @endguest
             </div>
         </header>
