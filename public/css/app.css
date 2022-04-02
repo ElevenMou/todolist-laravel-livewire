@@ -248,7 +248,7 @@ main {
   font-size: 14px;
 }
 .container .items-list {
-  background: #ffffff;
+  background: #f2cffd;
   padding: 10px;
   width: 100%;
 }
@@ -346,7 +346,7 @@ main {
 .alert {
   position: absolute;
   display: flex;
-  padding: 10px 20px;
+  padding: 10px;
   bottom: 20px;
   right: 20px;
   border-radius: 10px;
@@ -366,7 +366,7 @@ main {
   border: none;
   color: #2b0044;
   font-family: "Roboto Slab", serif;
-  margin-right: 5px;
+  margin-right: 10px;
   font-size: 14px;
 }
 
@@ -426,4 +426,16 @@ main {
   border-radius: 50%;
   margin-left: 30px;
   margin-top: 10px;
+}
+
+@media only screen and (max-width: 650px) {
+  .container {
+    width: 98%;
+  }
+  .container .item-list {
+    padding: 5px;
+  }
+  .container .action {
+    flex-direction: column;
+  }
 }

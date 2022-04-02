@@ -8,11 +8,22 @@
         @livewire('list-items')
     </div>
 
-    @if (session()->has('success'))
-        <p class="alert success">{{ session()->get('success') }}</p>
+    @if ($session)
+        @if (session()->has('success'))
+            <div class="alert success">
+                <button wire:click="closeSession">X</button>
+                <p>{{ session()->get('success') }}</p>
+            </div>
+        @endif
     @endif
-    @if (session()->has('deleted'))
-        <p class="alert danger">{{ session()->get('deleted') }}</p>
+
+    @if ($session)
+        @if (session()->has('deleted'))
+            <div class="alert danger">
+                <button wire:click="closeSession">X</button>
+                <p>{{ session()->get('deleted') }}</p>
+            </div>
+        @endif
     @endif
 
 </div>

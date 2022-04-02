@@ -64,7 +64,12 @@
             <button type="submit" class="main-btn">Register</button>
         </form>
     </div>
-    @if (session()->has('success'))
-        <p class="alert success">{{ session()->get('success') }}</p>
+    @if ($session)
+        @if (session()->has('success'))
+            <div class="alert success">
+                <button wire:click="closeSession">X</button>
+                <p>{{ session()->get('success') }} <a href="{{ route('login') }}">Login</a></p>
+            </div>
+        @endif
     @endif
 </div>

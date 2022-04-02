@@ -31,7 +31,6 @@ class AddItemForm extends Component
 
         $this->reset();
 
-
         $this->emit('itemAded');
     }
 

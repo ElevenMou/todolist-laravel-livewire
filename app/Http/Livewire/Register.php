@@ -16,6 +16,8 @@ class Register extends Component
     public $password = '';
     public $password_confirmation = '';
 
+    public $session = false;
+
     protected $rules = [
         'first_name' => 'required|string|max:30|min:3',
         'last_name' => 'required|string|max:30|min:3',
@@ -28,7 +30,10 @@ class Register extends Component
         $this->validateOnly($propertyName);
     }
 
-
+    public function closeSession()
+    {
+        $this->session = false;
+    }
 
     public function registerUser()
     {
@@ -42,6 +47,7 @@ class Register extends Component
         ]);
 
         $this->reset();
+        $this->session = true;
 
         session()->flash('success', 'Your account created successfuly');
     }
