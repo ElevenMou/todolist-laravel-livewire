@@ -438,4 +438,8 @@ main {
   .container .action {
     flex-direction: column;
   }
+
+  .form form {
+    width: 95%;
+  }
 }
