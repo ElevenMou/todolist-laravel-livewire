@@ -5,9 +5,9 @@
 
         @livewire('add-item-form')
 
-        @livewire('list-items')
-    </div>
 
+    </div>
+    @livewire('list-items')
     @if ($session)
         @if (session()->has('success'))
             <div class="alert success">
