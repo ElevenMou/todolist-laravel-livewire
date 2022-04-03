@@ -17,11 +17,11 @@
         }
     }
     &.incompleted{
-        background: $white-1;
+        background: $white;
         color: $color-1;
         &:hover{
-            border: 1px solid $white-1;
-            color: $white-1;
+            border: 1px solid $white;
+            color: $white;
             background: $color-1;
         }
     }
